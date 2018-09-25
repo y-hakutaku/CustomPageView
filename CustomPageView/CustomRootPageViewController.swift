@@ -20,22 +20,24 @@ class CustomRootPageViewController: UIViewController, UIScrollViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pageViewController = childViewControllers.compactMap{$0 as? UIPageViewController}.first
-        pageViewController!.dataSource = self
-        pageViewController!.delegate = self
-        pageViewController!.didMove(toParentViewController: self)
-        
+        setUpPageContentViews()
         tabMenuViewController = childViewControllers.compactMap{$0 as? PageMenuViewController}.first
         tabMenuViewController!.didMove(toParentViewController: self)
     }
     
-    func setUpPageViewContentViews() {
-        for _ in 0..<PageItem.titles.count {
-            pageViewContentViewControllers.append(storyboard!.instantiateViewController(withIdentifier: "TableView"))
+    func setUpPageContentViews() {
+        pageViewController = childViewControllers.compactMap{$0 as? UIPageViewController}.first
+        pageViewController!.dataSource = self
+        pageViewController!.delegate = self
+        
+        for index in 0..<PageItem.titles.count {
+            let contentViewController: TableViewController = (storyboard!.instantiateViewController(withIdentifier: "TableView") as? TableViewController)!
+            contentViewController.inject(tableName: PageItem.titles[index])
+            pageViewContentViewControllers.append(contentViewController)
         }
         // 初期設定時に渡すviewControllerは1つ
         pageViewController!.setViewControllers([pageViewContentViewControllers.first!], direction: .forward, animated: false, completion: nil)
+        pageViewController!.didMove(toParentViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
