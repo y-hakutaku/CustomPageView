@@ -17,6 +17,7 @@
 		3606FB7A2158B00600F47E65 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606FB792158B00600F47E65 /* PageMenuViewController.swift */; };
 		3606FB7C2158FA9A00F47E65 /* PageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606FB7B2158FA9A00F47E65 /* PageItem.swift */; };
 		3606FB7E2158FF1900F47E65 /* CustomPageMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606FB7D2158FF1900F47E65 /* CustomPageMenuItem.swift */; };
+		3606FB80215A73CA00F47E65 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606FB7F215A73CA00F47E65 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3606FB792158B00600F47E65 /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
 		3606FB7B2158FA9A00F47E65 /* PageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItem.swift; sourceTree = "<group>"; };
 		3606FB7D2158FF1900F47E65 /* CustomPageMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageMenuItem.swift; sourceTree = "<group>"; };
+		3606FB7F215A73CA00F47E65 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3606FB7D2158FF1900F47E65 /* CustomPageMenuItem.swift */,
 				3606FB792158B00600F47E65 /* PageMenuViewController.swift */,
 				3606FB7B2158FA9A00F47E65 /* PageItem.swift */,
+				3606FB7F215A73CA00F47E65 /* TableViewController.swift */,
 			);
 			path = CustomPageView;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3606FB7E2158FF1900F47E65 /* CustomPageMenuItem.swift in Sources */,
+				3606FB80215A73CA00F47E65 /* TableViewController.swift in Sources */,
 				3606FB782158918600F47E65 /* CustomRootPageViewController.swift in Sources */,
 				3606FB4A2158889A00F47E65 /* AppDelegate.swift in Sources */,
 				3606FB7C2158FA9A00F47E65 /* PageItem.swift in Sources */,
